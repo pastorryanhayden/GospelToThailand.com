@@ -56,3 +56,10 @@ ftp_dir: 'hartwellbaptistchurch.org/'
 ftp_passive: false
 ftp_username: 'ryahay11'
 ftp_password: '@88Volvocj'
+
+# Todo
+## Make an archive page. (Essentially the home page with no hero image and pagination.)
+## Liquid code the informed family page.
+## Design and code the get-involved page.
+## Design and code the get-in touch page. 
+ 
