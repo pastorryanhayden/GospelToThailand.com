@@ -1,0 +1,54 @@
+footer 
+    background: #231C4D
+    h1 
+        font-size: 40px 
+        color: #FFF071
+        padding-top: 20px
+        padding-right: 20px
+        padding-left: 20px 
+        text-transform: uppercase
+    .footer-wrapper
+        padding-top: 20px
+        padding-left: 20px
+        padding-right: 20px
+        display: flex 
+        text-align: center
+        flex-wrap: wrap
+        align-items: center
+    .archives
+        width: 100%
+        border-bottom: 2px dotted #FFF071
+        @include breakpoint(medium) 
+            width: 35%
+            margin-right: 10%
+            border-right: 2px dotted #FFF071
+            border-bottom: none
+        a 
+            padding: 10%
+            display: block
+            
+
+    .signup 
+        width: 100%
+        color: #19B9F2
+        padding-top: 30px
+        @include breakpoint(medium) 
+            width: 45%
+            padding-top: 0
+.footer-menu
+    background: #19B9F2
+    padding-top: 20px
+    padding-bottom: 20px
+    ul 
+        list-style-type: none
+        margin-left: none
+        padding-left: none
+        display: flex 
+        justify-content: space-around
+        flex-wrap: wrap
+        li
+            margin-left: 20px
+            margin-right: 20px
+        li a 
+            color: #231C4D
+            font-style: italic

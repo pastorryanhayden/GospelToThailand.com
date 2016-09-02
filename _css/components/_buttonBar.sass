@@ -1,0 +1,58 @@
+.home-banner
+    background: RGBA(35, 28, 77, 1.00)
+    display: flex
+    flex-wrap: wrap
+    color: RGBA(241, 157, 6, 1.00)
+    a 
+        color: RGBA(241, 157, 6, 1.00)
+    .social
+        padding-left: 50px
+        padding-right: 50px
+        padding-top: 15px
+        padding-bottom: 15px
+        text-align: center
+        display: flex 
+        align-items: center
+        flex-direction: column
+        justify-content: center
+        border-bottom: 1px solid RGBA(241, 157, 6, 1.00)
+        width: 100%
+        p 
+            max-width: 200px
+        @include breakpoint(medium)
+            border-right: 1px solid RGBA(241, 157, 6, 1.00)
+            width: 30%
+            border-bottom: none
+        @include breakpoint(large)
+            width: 40%
+        .social-buttons
+            width: 80%
+            margin-left: auto
+            margin-right: auto
+            display: flex
+            justify-content: space-around
+    .main-buttons
+        width: 70%
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        padding-left: 20px
+        padding-right: 20px
+        text-align: center 
+        align-items: center
+        width: 100%
+        padding-top: 15px
+        padding-bottom: 15
+        @include breakpoint(medium)
+            flex-wrap: nowrap
+            width: 70%
+        @include breakpoint(large)
+            width: 60%
+        .single-main-button 
+            width: 150px
+            a span 
+            
+                    
+            a p 
+                font-size: 16px
+                height: 40px

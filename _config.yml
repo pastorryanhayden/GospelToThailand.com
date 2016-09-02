@@ -1,0 +1,57 @@
+# What's the name of the church?
+title: Harwell Baptist Church
+# Give a brief description of the church
+description: > # this means to ignore newlines until "baseurl:"
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus blanditiis odio corrupti, 
+    illum architecto consequuntur, quaerat unde repudiandae qui temporibus! Fuga maxime molestiae hic impedit 
+    sit sint perferendis rerum unde.
+# Leave this alone
+baseurl: "" # the subpath of your site, e.g. /blog
+# Change this to the domain when you are finished and ready to publish.
+
+url: "http://hartwellbaptistchurch.org/" # the base hostname & protocol for your site | Switch to http://cranesvillebiblechurch.com/" Before running Glynn.  Afterwards change it back to http://localhost:4000/
+
+# This is the path to the default images.  If you add different default images you can change them here.
+default_header_image: "assets/default_header.jpg"
+default_sermon_image: "assets/default_header.jpg"
+default_blog_image: "http://sitesforchurch.s3.amazonaws.com/blog-image.jpg"
+default_about_image: "assets/default_header.jpg"
+default_calendar_image: "http://sitesforchurch.s3.amazonaws.com/calendar_default.jpg"
+
+ 
+# Airtable API Stuff
+airtable:
+  apikey: "keyRTLlrVS02vC3Vx"
+  updates: "appm2lKQElhXprkys"
+  family: "appmUsgawmXtRkye5"
+  field: "appdwmiUD5Z9vPyBh"
+  contact: "appL4rAE6zrLcqYvT"
+  
+
+# LEAVE EVERYTHING ELSE ALONE!!
+
+# Build settings
+markdown: kramdown
+ 
+# Exclude
+exclude:
+  - package.json
+  - node_modules
+  - gulpfile.js 
+  - bower_components
+keep_files:
+  - assets/css
+
+
+page_gen:
+  - data: 'updates'
+    template: 'post'
+    name: 'title'
+    dir: 'updates'
+  
+
+ftp_host: 'biblebaptistmattoon.org'
+ftp_dir: 'hartwellbaptistchurch.org/'
+ftp_passive: false
+ftp_username: 'ryahay11'
+ftp_password: '@88Volvocj'

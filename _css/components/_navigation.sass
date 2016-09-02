@@ -1,0 +1,50 @@
+body
+    background: darken(#EA1921, 15%)
+.page-wrapper
+    max-width: 1200px
+    width: 95%
+    margin-left: auto
+    margin-right: auto
+    background: $white
+    min-height: 120vh
+div.header
+    display: flex
+    flex-wrap: wrap  
+    width: 100%
+    justify-content: center 
+    align-items: center
+    padding-bottom: 20px
+    @include breakpoint(975px)
+        height: 65px
+        justify-content: space-between
+        padding-bottom: 0
+    background: RGBA(35, 28, 77, 0.49)
+    h1
+        background: url('http://sitesforchurch.s3.amazonaws.com/thailandLogo.png') no-repeat top left
+        background-size: contain
+        width: 137px
+        height: 81px
+        margin-top: 40px
+        margin-left: 30px
+        text-indent: -5000px
+    nav 
+        width:  750px
+        min-width: 500px
+        display: flex 
+        justify-content: space-between
+        align-items: center
+        flex-direction: column
+        height: 170px
+        @include breakpoint(650px)
+            flex-direction: row
+            height: inherit
+            justify-content: space-around 
+        a 
+            color: RGBA(25, 185, 242, 1.00)
+            font-size: 20px
+
+            span
+                color: RGBA(252, 238, 38, 1.00)
+                font-family: $cursive
+                font-size: 23px
+

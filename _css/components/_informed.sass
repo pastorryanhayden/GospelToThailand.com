@@ -1,0 +1,108 @@
+.informed-header 
+    background: url(http://sitesforchurch.s3.amazonaws.com/informed-background.png) no-repeat center center
+    background-size: cover
+.informed-page
+    max-width: 90%
+    margin-left: auto
+    margin-right: auto
+    background: RGBA(254, 254, 254, 0.70)
+    padding: 20px
+    display: flex
+    flex-wrap: wrap 
+    article
+        width: 100%
+        border-right: none
+        border-top: 2px dotted #231C4D
+        padding-top: 20px
+        margin-top: 20px
+        @include breakpoint(medium)
+            max-width: 75%
+            border-right: 2px dotted #231C4D
+            border-top: none
+            margin-right: 20px
+            padding-right: 20px
+        h1 
+            color: RGBA(167, 15, 21, 1.00)
+            font-size: 24px
+            font-family: $cursive
+        img 
+            border: 2px solid RGBA(167, 15, 21, 1.00)
+            margin-top: 20px
+            margin-bottom: 20px
+            text-align: center
+            margin-left: auto
+            margin-right: auto
+            display: block
+        .informed-section
+            h2
+                color: RGBA(167, 15, 21, 1.00)
+                font-size: 30px
+                font-family: $cursive
+            h3
+                color: RGBA(167, 15, 21, 1.00)
+                font-size: 25px
+                font-family: $cursive 
+            h4
+                color: RGBA(167, 15, 21, 1.00)
+                font-size: 25px
+                font-family: $cursive
+                text-align: center
+        #testimonies
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            h2
+                width: 100%
+            .testimony
+                width: 100%
+                @include breakpoint(medium)
+                    width: 45%
+        #beliefs
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            .belief
+                width: 100%
+                @include breakpoint(medium)
+                    width: 30% 
+
+            
+.informed-menu
+    width: 100%
+    @include breakpoint(medium)
+        width: 20%
+        flex-shrink: 2
+        order: 2
+    ul li a 
+        color: RGBA(35, 28, 77, 1.00)
+        font-size: 20px
+.informed-tabs 
+    display: flex
+    justify-content: center
+    max-width: 90%
+    margin-left: auto
+    margin-right: auto
+    flex-wrap: wrap 
+    a 
+        width: 100%    
+        flex-shrink: 2
+        height: 65px
+        text-align: center 
+        line-height: 65px
+        background: RGBA(234, 25, 33, 0.70)
+        font-family: $cursive
+        font-size: 40px
+        background: RGBA(254, 254, 254, 0.70)
+        color: RGBA(167, 15, 21, 1.00)
+        @include breakpoint(medium)
+            width: 250px
+            background: RGBA(234, 25, 33, 0.70)
+            color: RGBA(252, 238, 38, 1.00)
+    a.active
+        background: RGBA(234, 25, 33, 0.70)
+        color: RGBA(252, 238, 38, 1.00)
+        @include breakpoint(medium)
+            background: RGBA(254, 254, 254, 0.70)
+            color: RGBA(167, 15, 21, 1.00)
+
+
