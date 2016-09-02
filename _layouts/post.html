@@ -8,13 +8,20 @@ layout: default
   <div class="main-content">
     <h2>Ministry Updates</h2>
     <article class="ministry-update">
-      <a href="#" class="featured_image"><img src="http://placehold.it/1920x1080?text=featured+image" alt=""></a><!--/featured_image-->
-      <h3><a href="#">Title goes here for the update</a></h3>
-      <h4>January 1, 2000</h4>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sint nobis fugit reprehenderit, eius officia, repudiandae in officiis, explicabo cumque voluptates, accusamus accusantium magnam soluta alias adipisci voluptate aliquam! Maxime. </p>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio doloribus dolorum saepe ipsum unde, placeat nemo corrupti dolor eos cumque quo facere asperiores libero ipsam exercitationem recusandae itaque quidem perferendis.</p>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio doloribus dolorum saepe ipsum unde, placeat nemo corrupti dolor eos cumque quo facere asperiores libero ipsam exercitationem recusandae itaque quidem perferendis.</p>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio doloribus dolorum saepe ipsum unde, placeat nemo corrupti dolor eos cumque quo facere asperiores libero ipsam exercitationem recusandae itaque quidem perferendis.</p>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sint nobis fugit reprehenderit, eius officia, repudiandae in officiis, explicabo cumque voluptates, accusamus accusantium magnam soluta alias adipisci voluptate aliquam! Maxime. </p>
+      {% if  page.featured_image %}
+        {% for img in page.featured_image %}
+        <a href="#" class="featured_image">
+        <img src="{{img.url}}" alt=""></a><!--/featured_image-->
+        {% endfor %}
+        {% else %}
+        {% for img in site.data.updateimage[0].Featured_Image %}
+      <a href="#" class="featured_image">
+        <img src="{{img.url}}" alt=""></a><!--/featured_image-->
+          {% endfor %}
+     {% endif %}
+      <h3><a href="#">{{page.title}}</a></h3>
+      <h4>{{page.date}}</h4>
+      {{page.body_content | markdownify }}
     </article><!--/ministry-update-->
+    {% include share.html %}
   </div><!--/main-content-->

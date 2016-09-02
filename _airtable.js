@@ -51,6 +51,37 @@ updates('Prayer_Letters').select({
 });
 
 
+var fileupdateimage = '_data/updateimage.json';
+var updateimage = new Airtable({ apiKey: config.apikey }).base(config.updates);
+var updateimageJson = [];
+var updateimageJsonTest = [];
+
+updateimage('Defaults').select({
+    maxRecords: 1,
+  //Formula to how to get data
+  // help https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference
+
+}).eachPage(function page(records, fetchNextPage) {
+
+    // This function (`page`) will get called for each page of records.
+
+    records.forEach(function(record) {
+      updateimageJson.push(record._rawJson.fields);
+      
+    });
+    fetchNextPage();
+
+}, function done(error) {
+    if (error) {
+        console.log(error);
+    }
+  jsonfile.writeFile(fileupdateimage, updateimageJson, function (err) {
+    console.error(err)
+  });
+  console.log('updateimage worked');
+});
+
+
 
 // Family Intro - 1
 
@@ -261,3 +292,108 @@ contact('Contact_Page').select({
 
 
 // TODO Add Feild stuff. (Need to figure out data structure first)
+
+
+
+// Main Info 
+
+
+var fileinfo = '_data/info.json';
+var info = new Airtable({ apiKey: config.apikey }).base(config.info);
+var infoJson = [];
+var infoJsonTest = [];
+
+
+    info('Main_Stuff').select({
+        maxRecords: 1,
+      //Formula to how to get data
+      // help https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference
+
+    }).eachPage(function page(records, fetchNextPage) {
+
+        // This function (`page`) will get called for each page of records.
+
+        records.forEach(function(record) {
+          infoJson.push(record._rawJson.fields);
+          
+        });
+        fetchNextPage();
+
+    }, function done(error) {
+        if (error) {
+            console.log(error);
+        }
+      jsonfile.writeFile(fileinfo, infoJson, function (err) {
+        console.error(err)
+      });
+      console.log('info worked');
+    });
+
+
+    // Contact
+
+var filecontact = '_data/contact.json';
+var contact = new Airtable({ apiKey: config.apikey }).base(config.info);
+var contactJson = [];
+var contactJsonTest = [];
+
+
+
+    contact('Contact_Info').select({
+        maxRecords: 1,
+      //Formula to how to get data
+      // help https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference
+
+    }).eachPage(function page(records, fetchNextPage) {
+
+        // This function (`page`) will get called for each page of records.
+
+        records.forEach(function(record) {
+          contactJson.push(record._rawJson.fields);
+          
+        });
+        fetchNextPage();
+
+    }, function done(error) {
+        if (error) {
+            console.log(error);
+        }
+      jsonfile.writeFile(filecontact, contactJson, function (err) {
+        console.error(err)
+      });
+      console.log('contact worked');
+    });
+
+    //home page stuff
+
+    var filehome = '_data/home.json';
+var home = new Airtable({ apiKey: config.apikey }).base(config.info);
+var homeJson = [];
+var homeJsonTest = [];
+
+
+
+    home('Home_Page').select({
+        maxRecords: 1,
+      //Formula to how to get data
+      // help https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference
+
+    }).eachPage(function page(records, fetchNextPage) {
+
+        // This function (`page`) will get called for each page of records.
+
+        records.forEach(function(record) {
+          homeJson.push(record._rawJson.fields);
+          
+        });
+        fetchNextPage();
+
+    }, function done(error) {
+        if (error) {
+            console.log(error);
+        }
+      jsonfile.writeFile(filehome, homeJson, function (err) {
+        console.error(err)
+      });
+      console.log('home worked');
+    });

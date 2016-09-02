@@ -1,16 +1,17 @@
-hom<div class="home-banner">
+<div class="home-banner">
     <div class="social">
         <p>Connect with the Hernandez Family on Social Media:</p>
         <div class="social-buttons">
-            <a href="https://www.facebook.com/ahmethernandez"><i class="fa fa-facebook"></i></a>
-            <a href="https://twitter.com/ahmethernandez"><i class="fa fa-twitter"></i></a>
-            <a href="https://plus.google.com/u/0/+AhmetHernandez/posts"><i class="fa fa-google-plus"></i></a>
-            <a href="https://www.youtube.com/channel/UCbm7A4wXaT58LqJ4_y0pTkQ"><i class="fa fa-youtube"></i></a>
+          {% if site.data.contact[0].Facebook  %}
+            <a href="{{site.data.contact[0].Facebook}}"><i class="fa fa-facebook"></i></a>{% endif %}
+             {% if site.data.contact[0].Twitter  %}<a href="{{site.data.contact[0].Twitter}}"><i class="fa fa-twitter"></i></a>{% endif %}
+             {% if site.data.contact[0].GooglePlus  %}<a href="{{site.data.contact[0].GooglePlus}}"><i class="fa fa-google-plus"></i></a>{% endif %}
+             {% if site.data.contact[0].Youtube  %}<a href="{{site.data.contact[0].Youtube}}"><i class="fa fa-youtube"></i></a>{% endif %}
         </div><!--/social-buttons-->
     </div><!--/social-->
     <div class="main-buttons">
       <div class="single-main-button">
-        <a href="#">
+        <a href="https://www.youtube.com/embed/vt1Ts9UTUOs">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-play-circle fa-stack-2x fa-inverse"></i>

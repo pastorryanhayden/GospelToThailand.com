@@ -1,5 +1,5 @@
 # What's the name of the church?
-title: Harwell Baptist Church
+title: Gospel to Thailand
 # Give a brief description of the church
 description: > # this means to ignore newlines until "baseurl:"
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus blanditiis odio corrupti, 
@@ -9,7 +9,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 # Change this to the domain when you are finished and ready to publish.
 
-url: "http://hartwellbaptistchurch.org/" # the base hostname & protocol for your site | Switch to http://cranesvillebiblechurch.com/" Before running Glynn.  Afterwards change it back to http://localhost:4000/
+url: "http://localhost:3000/" # the base hostname & protocol for your site | Switch to http://cranesvillebiblechurch.com/" Before running Glynn.  Afterwards change it back to http://localhost:4000/
 
 # This is the path to the default images.  If you add different default images you can change them here.
 default_header_image: "assets/default_header.jpg"
@@ -26,6 +26,7 @@ airtable:
   family: "appmUsgawmXtRkye5"
   field: "appdwmiUD5Z9vPyBh"
   contact: "appL4rAE6zrLcqYvT"
+  info: "appWwxIfnxNsvie4h"
   
 
 # LEAVE EVERYTHING ELSE ALONE!!
