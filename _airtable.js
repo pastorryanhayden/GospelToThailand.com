@@ -465,3 +465,38 @@ involved('Page').select({
   });
   console.log('involved worked');
 });
+
+
+// Contact Page Details 
+
+var filecontactPage = '_data/contactPage.json';
+var contactPage = new Airtable({ apiKey: config.apikey }).base(config.contact);
+var contactPageJson = [];
+var contactPageJsonTest = [];
+
+
+
+contactPage('Contact_Page').select({
+    maxRecords: 1,
+  //Formula to how to get data
+  // help https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference
+
+}).eachPage(function page(records, fetchNextPage) {
+
+    // This function (`page`) will get called for each page of records.
+
+    records.forEach(function(record) {
+      contactPageJson.push(record._rawJson.fields);
+      
+    });
+    fetchNextPage();
+
+}, function done(error) {
+    if (error) {
+        console.log(error);
+    }
+  jsonfile.writeFile(filecontactPage, contactPageJson, function (err) {
+    console.error(err)
+  });
+  console.log('contactPage worked');
+});

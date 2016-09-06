@@ -128,57 +128,56 @@ if(isset($_POST) and $_POST['send'] == "Send" ) {
 	}	
  }   
 ?>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Airtable data insert demo</title>
-</head>
-<body>
-<form action="" method="POST">
-<table border='1'>
-<?php
- if (!empty($emailmsg)){
-?>
-<tr><td>
-</td><td><?php print $emailmsg; ?></td></tr><br/>
-<?php     
- }
-?>  
-<input type="hidden" id="cap" name="cap" value = '<?php print $_SESSION['captcha'];?>'/>  
-<tr><td>Name:
-</td><td><input type="text" id="name" name="name" /></td></tr><br/>
-<tr><td>Email:
-</td><td><input type="text" id="email" name="email" /></td></tr><br/>
-<tr><td>Phone:
-</td><td><input type="text" id="phone" name="phone" /></td></tr><br/>
-<tr><td>Message: 
-</td><td><textarea name="message" rows="5" cols="50"></textarea></td></tr><br/>
-<tr><td><img src = '<?php echo $_SESSION['captcha']['image_src']; ?>'>
-</td><td>Pls type the displayed characters in the text box<input type="text" id="captcha" name="captcha" ></td></tr><br/>
-<tr><td>&nbsp;</td><td>
-<input  name="send" id="send" type="submit" value="Send" /></td></tr>
-</table>
-</form>
-</body>
-</html>	
-
 
 <div class="informed-header">
  {% include header.html %}
   <div class="main-content">
 
       <div class="normal-page">
-       <h2>{{ site.data.involved[0].Page_Heading }}</h2>
+       <h2>{{ site.data.contactPage[0].Heading }}</h2>
     <article class="ministry-update">
-        {% if  site.data.involved[0].Featured_Image %}
-        {% for img in site.data.involved[0].Featured_Image %}
-        <a href="#" class="featured_image">
-        <img src="{{img.url}}" alt="" class="thumbnail"></a><!--/featured_image-->
-        {% endfor %}
-        {% endif %}
 
-        {{ site.data.involved[0].Content | markdownify }}
-      
+        {{ site.data.contactPage[0].Content | markdownify }}
+		<br/>
+		
+		<form action="" method="POST">
+		<input type="hidden" id="cap" name="cap" value = '<?php print $_SESSION['captcha'];?>'/>  
+		<div class="row">
+			<div class="medium-4 columns">
+			<label>Name
+				<input type="text" placeholder="Your Name" name="name" id="name" required aria-describedby="nameHelpText">
+				<p id="nameHelpText" class="help-text">Required</p>
+			</label>
+			</div><!--/name-->
+			<div class="medium-4 columns">
+			<label>Email
+				<input type="text" placeholder="you@email.com" name="email" id="email" required aria-describedby="emailHelpText">
+				<p id="emailHelpText" class="help-text">Required</p>
+			</label>
+			</div><!--/email-->
+			<div class="medium-4 columns">
+			<label>Phone
+				<input type="text" name="phone" id="phone" placeholder="(123) 456-7890"> 
+			</label>
+			</div><!--/phone-->
+			<div class="small-12 columns">
+			<label>Message
+				<textarea name="message" placeholder="I have a question about..." required></textarea> 
+			</label>
+			</div><!--/message-->
+			<div class="small-6 medium-6 captcha columns end">
+				<p>Please type the characters displayed below</p>
+				<img src = '<?php echo $_SESSION['captcha']['image_src']; ?>'>
+			</div><!--/captcha image-->
+			<div class="small-6 medium-6 captcha-input columns">
+			<label>Captcha
+				<input type="text" id="captcha" name="captcha" required> 
+			</label>
+			</div><!--/captcha input-->
+			<div class="small-12 columns">
+			<input  name="send" id="send" type="submit" value="Send" class="button"/>
+			</div>
+		</form>
     </article><!--/ministry-update-->
     </div><!--/archives-page-->
     </div><!--/informed-header-->
