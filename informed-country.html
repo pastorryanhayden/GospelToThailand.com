@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="informed-header">
+ {% include header.html %}
+  <div class="main-content">
+      <div class="informed-tabs">
+          <a href="{{site.url}}informed-family.html">Our Family</a>
+          <a href="#" class="active">Thailand</a>
+      </div><!--/informed-tabs-->
+      <div class="informed-page">
+          <div class="informed-menu">
+            <ul class="menu vertical">
+                {% for section in site.data.field %}
+                    <li><a href="#{{ section.Section_Title | slugify }}">{{ section.Section_Title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div><!--/informed-menu-->
+        <article>
+        {% for section in site.data.field %}
+            <div id="{{ section.Section_Title | slugify }}" class="informed-section">
+                <h2>{{ section.Section_Title }}</h2>
+                {% if  section.Photo %}
+                {% for img in section.Photo %}
+                <img src="{{img.url}}" alt="">
+                {% endfor %}
+                {% endif %}
+                <br>
+                {{ section.Content | markdownify }}
+            </div><!--#{{ section.Section_Title | slugify }}-->
+            {% endfor %}
+        </article>
+        
+    </div><!--/informed-page-->
+    </div><!--/informed-header-->
+  </div><!--/main-content-->

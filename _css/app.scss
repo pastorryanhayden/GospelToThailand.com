@@ -22,7 +22,7 @@
 @include foundation-drilldown-menu;
 @include foundation-dropdown;
 @include foundation-dropdown-menu;
-// @include foundation-flex-video;
+@include foundation-flex-video;
 // @include foundation-label;
 // @include foundation-media-object;
 @include foundation-off-canvas;
@@ -55,3 +55,4 @@
 @import "components/footer"; 
 @import "components/article"; 
 @import "components/informed"; 
+@import "components/archives"; 

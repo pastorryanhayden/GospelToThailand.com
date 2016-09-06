@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="informed-header">
+ {% include header.html %}
+  <div class="main-content">
+
+      <div class="normal-page">
+       <h2>{{ site.data.involved[0].Page_Heading }}</h2>
+    <article class="ministry-update">
+        {% if  site.data.involved[0].Featured_Image %}
+        {% for img in site.data.involved[0].Featured_Image %}
+        <a href="#" class="featured_image">
+        <img src="{{img.url}}" alt="" class="thumbnail"></a><!--/featured_image-->
+        {% endfor %}
+        {% endif %}
+
+        {{ site.data.involved[0].Content | markdownify }}
+      
+    </article><!--/ministry-update-->
+    </div><!--/archives-page-->
+    </div><!--/informed-header-->
+  </div><!--/main-content-->

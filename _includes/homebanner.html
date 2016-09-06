@@ -7,6 +7,7 @@
              {% if site.data.contact[0].Twitter  %}<a href="{{site.data.contact[0].Twitter}}"><i class="fa fa-twitter"></i></a>{% endif %}
              {% if site.data.contact[0].GooglePlus  %}<a href="{{site.data.contact[0].GooglePlus}}"><i class="fa fa-google-plus"></i></a>{% endif %}
              {% if site.data.contact[0].Youtube  %}<a href="{{site.data.contact[0].Youtube}}"><i class="fa fa-youtube"></i></a>{% endif %}
+             {{site.data.contact.Facebook | raw }}
         </div><!--/social-buttons-->
     </div><!--/social-->
     <div class="main-buttons">
@@ -20,7 +21,7 @@
         </a>
       </div><!--/single-main-button-->
       <div class="single-main-button">
-        <a href="#">
+        <a href="{{site.url}}informed-country.html">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-globe fa-stack-2x fa-inverse"></i>
@@ -29,7 +30,7 @@
         </a>
       </div><!--/single-main-button-->
       <div class="single-main-button">
-        <a href="#">
+        <a href="{{site.url}}involved.html">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
           <i class="fa fa-paper-plane fa-stack-1x fa-inverse" style="color: #F19D06"></i>
@@ -38,7 +39,7 @@
         </a>
       </div><!--/single-main-button-->
       <div class="single-main-button">
-        <a href="#">
+        <a href="{{site.url}}involved.html">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
           <i class="fa fa-credit-card fa-stack-1x fa-inverse" style="color: #F19D06"></i>

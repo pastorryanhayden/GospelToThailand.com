@@ -27,6 +27,7 @@ airtable:
   field: "appdwmiUD5Z9vPyBh"
   contact: "appL4rAE6zrLcqYvT"
   info: "appWwxIfnxNsvie4h"
+  involved: "appZofV4wGJrzMc1U"
   
 
 # LEAVE EVERYTHING ELSE ALONE!!
@@ -58,8 +59,8 @@ ftp_username: 'ryahay11'
 ftp_password: '@88Volvocj'
 
 # Todo
-## Make an archive page. (Essentially the home page with no hero image and pagination.)
-## Liquid code the informed family page.
+## DONE ## Make an archive page. (Essentially the home page with no hero image and pagination.)
+## DONE ### Liquid code the informed family page.
+## Design and code the country page 
 ## Design and code the get-involved page.
 ## Design and code the get-in touch page. 
- 

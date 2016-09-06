@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<div class="informed-header">
+ {% include header.html %}
+  <div class="main-content">
+
+      <div class="archives-page">
+       <h2>Ministry Updates</h2>
+    {% for update in site.data.updates %}
+    <article class="ministry-update">
+        {% if  update.featured_image %}
+        {% for img in update.featured_image %}
+        <a href="{{ update.title | datapage_url: 'updates' | prepend: site.baseurl | prepend: site.url }}" class="featured_image">
+        <img src="{{img.url}}" alt=""></a><!--/featured_image-->
+        {% endfor %}
+        {% else %}
+        {% for img in site.data.updateimage[0].Featured_Image %}
+      
+      <a href="{{ update.title | datapage_url: 'updates' | prepend: site.baseurl | prepend: site.url }}" class="featured_image">
+        <img src="{{img.url}}" alt=""></a><!--/featured_image-->
+          {% endfor %}
+     {% endif %}
+      <h3><a href="{{ update.title | datapage_url: 'updates' | prepend: site.baseurl | prepend: site.url }}">{{ update.title }}</a></h3>
+      <h4>{{update.date}}</h4>
+      {{update.body_content | markdownify | truncatewords: 80}}
+      <br>
+      <a href="{{ update.title | datapage_url: 'updates' | prepend: site.baseurl | prepend: site.url }}" class="button hollow">Read More</a>
+    </article><!--/ministry-update-->
+    {% endfor %}
+    </div><!--/archives-page-->
+    </div><!--/informed-header-->
+  </div><!--/main-content-->
