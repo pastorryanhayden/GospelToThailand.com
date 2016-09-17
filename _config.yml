@@ -9,7 +9,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 # Change this to the domain when you are finished and ready to publish.
 
-url: "http://contact:90/" # the base hostname & protocol for your site | Switch to http://cranesvillebiblechurch.com/" Before running Glynn.  Afterwards change it back to http://localhost:4000/
+url: "http://gospeltothailand.com/" # the base hostname & protocol for your site | Switch to http://cranesvillebiblechurch.com/" Before running Glynn.  Afterwards change it back to http://localhost:4000/
 
 # This is the path to the default images.  If you add different default images you can change them here.
 default_header_image: "assets/default_header.jpg"
@@ -52,11 +52,11 @@ page_gen:
     dir: 'updates'
   
 
-ftp_host: 'biblebaptistmattoon.org'
-ftp_dir: 'hartwellbaptistchurch.org/'
+ftp_host: 'gospeltothailand.com'
+ftp_dir: 'gospeltothailand.com/'
 ftp_passive: false
-ftp_username: 'ryahay11'
-ftp_password: '@88Volvocj'
+ftp_username: 'ahmethernandez'
+ftp_password: 'MqCXkebB'
 
 # Todo
 ## DONE ## Make an archive page. (Essentially the home page with no hero image and pagination.)

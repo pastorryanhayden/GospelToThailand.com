@@ -17,7 +17,7 @@ $FROM_NAME = '';
 $TO_EMAIL = '';
 
 //Website name
-$WEBSITE = "";
+$WEBSITE = "gospeltothailand.com";
 
 //Airtable related setting
 $API_KEY = '{{site.airtable.apikey}}';
